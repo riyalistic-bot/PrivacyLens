@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Assessment | PrivacyLens</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<nav class="navbar">
+    <div class="logo">🔒 PrivacyLens</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/assessment">Assessment</a></li>
+    </ul>
+</nav>
+
+<section class="assessment-container">
+
+    <div class="assessment-box">
+
+        <h1>Privacy Assessment</h1>
+
+        <p class="subtitle">
+            Answer these questions to calculate your Privacy Score.
+        </p>
+
+        <form action="/result" method="POST">
+
+<!-- PASSWORD SECURITY -->
+
+<div class="question-card">
+<h3>1. How often do you reuse the same password?</h3>
+
+<label><input type="radio" name="password_reuse" value="never" required> Never</label>
+<label><input type="radio" name="password_reuse" value="sometimes"> Sometimes</label>
+<label><input type="radio" name="password_reuse" value="always"> Always</label>
+
+</div>
+
+<div class="question-card">
+<h3>2. Do you use a password manager?</h3>
+
+<label><input type="radio" name="password_manager" value="all" required> Yes, for all accounts</label>
+<label><input type="radio" name="password_manager" value="some"> Only for some accounts</label>
+<label><input type="radio" name="password_manager" value="no"> No</label>
+
+</div>
+
+<div class="question-card">
+<h3>3. How strong are your passwords?</h3>
+
+<label><input type="radio" name="password_strength" value="strong" required> 12+ characters, unique</label>
+<label><input type="radio" name="password_strength" value="medium"> 8–11 characters</label>
+<label><input type="radio" name="password_strength" value="weak"> Short or reused passwords</label>
+
+</div>
+
+<!-- ACCOUNT SECURITY -->
+
+<div class="question-card">
+<h3>4. Is Two-Factor Authentication enabled?</h3>
+
+<label><input type="radio" name="twofa" value="all" required> On all important accounts</label>
+<label><input type="radio" name="twofa" value="some"> On some accounts</label>
+<label><input type="radio" name="twofa" value="none"> Not enabled</label>
+
+</div>
+
+<div class="question-card">
+<h3>5. How often do you review your recovery email and phone number?</h3>
+
+<label><input type="radio" name="recovery" value="regularly" required> Regularly</label>
+<label><input type="radio" name="recovery" value="rarely"> Rarely</label>
+<label><input type="radio" name="recovery" value="never"> Never</label>
+
+</div>
+
+<!-- SOCIAL MEDIA -->
+
+<div class="question-card">
+<h3>6. What is the privacy setting of your social media accounts?</h3>
+
+<label><input type="radio" name="social" value="private" required> Mostly Private</label>
+<label><input type="radio" name="social" value="mixed"> Mixed</label>
+<label><input type="radio" name="social" value="public"> Mostly Public</label>
+
+</div>
+
+<div class="question-card">
+<h3>7. Do you share your live location or travel plans publicly?</h3>
+
+<label><input type="radio" name="location" value="never" required> Never</label>
+<label><input type="radio" name="location" value="sometimes"> Sometimes</label>
+<label><input type="radio" name="location" value="often"> Often</label>
+
+</div>
+
+<div class="question-card">
+<h3>8. How often do you review your privacy settings?</h3>
+
+<label><input type="radio" name="privacy" value="regularly" required> Every few months</label>
+<label><input type="radio" name="privacy" value="rarely"> Rarely</label>
+<label><input type="radio" name="privacy" value="never"> Never</label>
+
+</div>
+
+<!-- ONLINE BEHAVIOR -->
+
+<div class="question-card">
+<h3>9. How do you handle suspicious emails or messages?</h3>
+
+<label><input type="radio" name="phishing" value="ignore" required> I never click unknown links</label>
+<label><input type="radio" name="phishing" value="careful"> I usually verify first</label>
+<label><input type="radio" name="phishing" value="click"> I sometimes click them</label>
+
+</div>
+
+<div class="question-card">
+<h3>10. How do you use public Wi-Fi?</h3>
+
+<label><input type="radio" name="wifi" value="vpn" required> Only with VPN</label>
+<label><input type="radio" name="wifi" value="careful"> Only for browsing</label>
+<label><input type="radio" name="wifi" value="login"> I log into my accounts freely</label>
+
+</div>
+
+<!-- DEVICE SECURITY -->
+
+<div class="question-card">
+<h3>11. How is your device protected?</h3>
+
+<label><input type="radio" name="device" value="biometric" required> Face ID / Fingerprint + PIN</label>
+<label><input type="radio" name="device" value="pin"> PIN or Password only</label>
+<label><input type="radio" name="device" value="none"> No lock</label>
+
+</div>
+
+<div class="question-card">
+<h3>12. How often do you install security updates?</h3>
+
+<label><input type="radio" name="updates" value="immediately" required> As soon as available</label>
+<label><input type="radio" name="updates" value="later"> After a few weeks</label>
+<label><input type="radio" name="updates" value="never"> Rarely or never</label>
+
+</div>
+
+<button class="btn" type="submit">
+Generate Privacy Report →
+</button>
+
+</form>
+
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Report | PrivacyLens</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Your Privacy Report</h1>
+
+    <!-- Score Card -->
+    <div class="score-card">
+
+        <div class="circle">
+            <h2>{{ score }}</h2>
+            <span>/100</span>
+        </div>
+
+        <div class="risk">
+
+            {% if risk == "Low" %}
+                <span class="risk-low">🟢 Low Risk</span>
+
+            {% elif risk == "Medium" %}
+                <span class="risk-medium">🟡 Medium Risk</span>
+
+            {% else %}
+                <span class="risk-high">🔴 High Risk</span>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <!-- Persona -->
+
+    <div class="card">
+
+        <h2>{{ persona }}</h2>
+
+        <p>{{ persona_description }}</p>
+
+    </div>
+
+    <!-- Dashboard -->
+
+    <div class="grid">
+
+        <!-- Strengths -->
+
+        <div class="card">
+
+            <h3>✅ Security Strengths</h3>
+
+            {% if strengths %}
+
+                <ul>
+
+                    {% for item in strengths %}
+
+                        <li>{{ item }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            {% else %}
+
+                <p>No strengths available.</p>
+
+            {% endif %}
+
+        </div>
+
+        <!-- Weaknesses -->
+
+        <div class="card">
+
+            <h3>⚠ Areas to Improve</h3>
+
+            {% if weaknesses %}
+
+                <ul>
+
+                    {% for item in weaknesses %}
+
+                        <li>{{ item }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            {% else %}
+
+                <p>No major weaknesses detected.</p>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <!-- Recommendations -->
+
+    <div class="card">
+
+        <h3>💡 Recommendations</h3>
+
+        {% if recommendations %}
+
+            <ul>
+
+                {% for item in recommendations %}
+
+                    <li>{{ item }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        {% else %}
+
+            <p>Excellent! Keep maintaining your current privacy habits.</p>
+
+        {% endif %}
+
+    </div>
+
+    <!-- Summary -->
+
+    <div class="card">
+
+        <h3>📊 Assessment Summary</h3>
+
+        <table>
+
+            <tr>
+
+                <td><strong>Privacy Score</strong></td>
+
+                <td>{{ score }}/100</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Risk Level</strong></td>
+
+                <td>{{ risk }}</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Privacy Persona</strong></td>
+
+                <td>{{ persona }}</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="button-area">
+
+        <a href="/assessment" class="btn">
+
+            Take Assessment Again
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

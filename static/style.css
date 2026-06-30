@@ -1,0 +1,400 @@
+/* ===============================
+   PrivacyLens - Main Stylesheet
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0f172a;
+    color:#f8fafc;
+
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    line-height:1.6;
+
+}
+
+/* ===============================
+   Container
+================================== */
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:50px auto;
+
+}
+
+/* ===============================
+   Headings
+================================== */
+
+h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+    color:#38bdf8;
+
+}
+
+h2{
+
+    margin-bottom:10px;
+
+}
+
+h3{
+
+    margin-bottom:15px;
+
+    color:#38bdf8;
+
+}
+
+p{
+
+    color:#cbd5e1;
+
+}
+
+/* ===============================
+   Score Card
+================================== */
+
+.score-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+/* Circle */
+
+.circle{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    border:10px solid #38bdf8;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#1e293b;
+
+    box-shadow:0 0 25px rgba(56,189,248,.25);
+
+}
+
+.circle h2{
+
+    font-size:60px;
+
+    color:white;
+
+}
+
+.circle span{
+
+    color:#94a3b8;
+
+    font-size:18px;
+
+}
+
+/* ===============================
+   Risk Badge
+================================== */
+
+.risk{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.risk-low{
+
+    color:#22c55e;
+
+}
+
+.risk-medium{
+
+    color:#facc15;
+
+}
+
+.risk-high{
+
+    color:#ef4444;
+
+}
+
+/* ===============================
+   Cards
+================================== */
+
+.card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.3);
+
+}
+
+/* ===============================
+   Grid
+================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+/* ===============================
+   Lists
+================================== */
+
+ul{
+
+    margin-left:20px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===============================
+   Table
+================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid #334155;
+
+}
+
+/* ===============================
+   Buttons
+================================== */
+
+.button-area{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#0ea5e9;
+
+    transform:scale(1.05);
+
+}
+
+/* ===============================
+   Forms
+================================== */
+
+form{
+
+    margin-top:20px;
+
+}
+
+.question-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+}
+
+.question-card label{
+
+    display:block;
+
+    margin:12px 0;
+
+    cursor:pointer;
+
+}
+
+input[type="radio"]{
+
+    margin-right:10px;
+
+}
+
+input[type="email"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    border:1px solid #475569;
+
+    background:#0f172a;
+
+    color:white;
+
+    margin-top:10px;
+
+}
+
+button{
+
+    margin-top:25px;
+
+    width:100%;
+
+    padding:15px;
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#0ea5e9;
+
+}
+
+/* ===============================
+   Responsive
+================================== */
+
+@media(max-width:768px){
+
+.grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.circle{
+
+    width:150px;
+    height:150px;
+
+}
+
+.circle h2{
+
+    font-size:48px;
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+}
