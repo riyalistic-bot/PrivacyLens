@@ -1,5 +1,9 @@
 # 🔒 PrivacyLens
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen?style=for-the-badge)]([YOUR_RENDER_URL_HERE](https://privacylens-wc8u.onrender.com))
+
+# 🔒 PrivacyLens
+
 PrivacyLens is a Flask-based web application that helps users evaluate their online privacy habits by answering a simple questionnaire. The application calculates a privacy score, identifies potential security risks, and provides personalized recommendations to improve digital privacy.
 
 ---
