@@ -1,6 +1,6 @@
-/* ===============================
-   PrivacyLens - Main Stylesheet
-================================== */
+/* ==========================================
+   PRIVACYLENS - PROFESSIONAL STYLESHEET
+========================================== */
 
 *{
     margin:0;
@@ -8,113 +8,469 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
-    background:#0f172a;
-    color:#f8fafc;
-
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
-
-    line-height:1.6;
+    font-family:'Segoe UI',sans-serif;
+    background:#08111f;
+    color:white;
+    overflow-x:hidden;
 
 }
 
-/* ===============================
-   Container
-================================== */
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top left,#0ea5e930,transparent 35%),
+    radial-gradient(circle at bottom right,#14b8a620,transparent 35%),
+    #08111f;
+
+    z-index:-1;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    width:100%;
+    padding:25px 9%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.logo{
+
+    font-size:36px;
+    font-weight:bold;
+
+    color:#22d3ee;
+
+}
+
+.navbar ul{
+
+    display:flex;
+    list-style:none;
+    gap:40px;
+
+}
+
+.navbar a{
+
+    color:white;
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#38bdf8;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:90px 0 70px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#102748;
+
+    color:#22d3ee;
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    margin-bottom:35px;
+
+    font-size:20px;
+
+}
+
+.hero h1{
+
+    font-size:78px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:35px;
+
+}
+
+.hero p{
+
+    font-size:26px;
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:55px;
+
+    background:#22c7f3;
+
+    color:#07111f;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:24px;
+
+    padding:18px 45px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(34,199,243,.35);
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:80px auto;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:50px;
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:#132235;
+
+    border:1px solid #22364d;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.35);
+
+}
+
+.feature-card h3{
+
+    color:#38bdf8;
+
+    margin-bottom:18px;
+
+    font-size:28px;
+
+}
+
+.feature-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   GENERAL CONTAINER
+========================================== */
 
 .container{
 
     width:90%;
-    max-width:1100px;
+    max-width:1200px;
 
-    margin:50px auto;
+    margin:auto;
+
+    padding:70px 0;
+
+}
+/* ==========================================
+   ASSESSMENT PAGE
+========================================== */
+
+.assessment-container{
+
+    width:90%;
+    max-width:950px;
+
+    margin:50px auto 100px;
 
 }
 
-/* ===============================
-   Headings
-================================== */
+.assessment-box{
 
-h1{
+    background:#132235;
+
+    border:1px solid #22364d;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.30);
+
+}
+
+.assessment-box h1{
 
     text-align:center;
 
-    font-size:42px;
-
-    margin-bottom:35px;
-
     color:#38bdf8;
 
-}
-
-h2{
-
-    margin-bottom:10px;
-
-}
-
-h3{
+    font-size:48px;
 
     margin-bottom:15px;
 
-    color:#38bdf8;
-
 }
 
-p{
+.subtitle{
+
+    text-align:center;
 
     color:#cbd5e1;
 
+    margin-bottom:40px;
+
+    font-size:20px;
+
 }
 
-/* ===============================
-   Score Card
-================================== */
+.question-card{
+
+    background:#1b2b40;
+
+    border:1px solid #304862;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.question-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#38bdf8;
+
+}
+
+.question-card h3{
+
+    color:white;
+
+    font-size:23px;
+
+    margin-bottom:18px;
+
+}
+
+.question-card label{
+
+    display:block;
+
+    margin:14px 0;
+
+    color:#dbeafe;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+}
+
+.question-card input{
+
+    margin-right:12px;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#22c7f3;
+
+    color:#08111f;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(34,199,243,.35);
+
+}
+
+input[type="email"]{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #334155;
+
+    background:#0f172a;
+
+    color:white;
+
+    margin-top:10px;
+
+}
+/* ==========================================
+   RESULT PAGE
+========================================== */
 
 .score-card{
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
 
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
-/* Circle */
-
 .circle{
 
-    width:180px;
-
-    height:180px;
+    width:190px;
+    height:190px;
 
     border-radius:50%;
 
-    border:10px solid #38bdf8;
+    border:10px solid #22c7f3;
+
+    background:#132235;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
-    background:#1e293b;
-
-    box-shadow:0 0 25px rgba(56,189,248,.25);
+    box-shadow:0 0 35px rgba(34,199,243,.25);
 
 }
 
 .circle h2{
 
-    font-size:60px;
+    font-size:65px;
 
     color:white;
+
+    margin:0;
 
 }
 
@@ -122,19 +478,15 @@ p{
 
     color:#94a3b8;
 
-    font-size:18px;
+    font-size:20px;
 
 }
 
-/* ===============================
-   Risk Badge
-================================== */
-
 .risk{
 
-    margin-top:20px;
+    margin-top:25px;
 
-    font-size:22px;
+    font-size:26px;
 
     font-weight:bold;
 
@@ -158,21 +510,27 @@ p{
 
 }
 
-/* ===============================
-   Cards
-================================== */
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:25px;
+
+    margin:40px 0;
+
+}
 
 .card{
 
-    background:#1e293b;
+    background:#132235;
 
-    border:1px solid #334155;
+    border:1px solid #22364d;
 
-    border-radius:15px;
+    border-radius:18px;
 
-    padding:25px;
-
-    margin-bottom:25px;
+    padding:30px;
 
     transition:.3s;
 
@@ -180,45 +538,44 @@ p{
 
 .card:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-6px);
 
-    box-shadow:0 12px 25px rgba(0,0,0,.3);
-
-}
-
-/* ===============================
-   Grid
-================================== */
-
-.grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
 
 }
 
-/* ===============================
-   Lists
-================================== */
+.card h2,
+.card h3{
 
-ul{
+    color:#38bdf8;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:#dbeafe;
+
+    line-height:1.8;
+
+}
+
+.card ul{
 
     margin-left:20px;
 
-}
-
-li{
-
-    margin-bottom:10px;
+    margin-top:10px;
 
 }
 
-/* ===============================
-   Table
-================================== */
+.card li{
+
+    margin-bottom:12px;
+
+    color:#dbeafe;
+
+}
 
 table{
 
@@ -230,151 +587,99 @@ table{
 
 td{
 
-    padding:12px;
+    padding:15px;
 
     border-bottom:1px solid #334155;
 
 }
 
-/* ===============================
-   Buttons
-================================== */
-
 .button-area{
 
     text-align:center;
 
-    margin-top:35px;
+    margin-top:40px;
 
 }
 
-.btn{
+/* ==========================================
+   FOOTER
+========================================== */
 
-    display:inline-block;
+footer{
 
-    background:#38bdf8;
+    text-align:center;
 
-    color:#0f172a;
+    padding:35px;
 
-    text-decoration:none;
+    color:#94a3b8;
 
-    padding:15px 30px;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-    transition:.3s;
+    font-size:15px;
 
 }
 
-.btn:hover{
+/* ==========================================
+   MOBILE
+========================================== */
 
-    background:#0ea5e9;
+@media (max-width:768px){
 
-    transform:scale(1.05);
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
 
 }
 
-/* ===============================
-   Forms
-================================== */
+.navbar ul{
 
-form{
+    flex-direction:column;
 
-    margin-top:20px;
+    text-align:center;
+
+    gap:15px;
+
+}
+
+.hero{
+
+    padding:60px 0;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.assessment-box{
+
+    padding:30px;
+
+}
+
+.assessment-box h1{
+
+    font-size:36px;
 
 }
 
 .question-card{
 
-    background:#1e293b;
-
-    border:1px solid #334155;
-
-    border-radius:15px;
-
-    padding:25px;
-
-    margin-bottom:20px;
-
-}
-
-.question-card label{
-
-    display:block;
-
-    margin:12px 0;
-
-    cursor:pointer;
-
-}
-
-input[type="radio"]{
-
-    margin-right:10px;
-
-}
-
-input[type="email"]{
-
-    width:100%;
-
-    padding:14px;
-
-    border-radius:8px;
-
-    border:1px solid #475569;
-
-    background:#0f172a;
-
-    color:white;
-
-    margin-top:10px;
-
-}
-
-button{
-
-    margin-top:25px;
-
-    width:100%;
-
-    padding:15px;
-
-    background:#38bdf8;
-
-    color:#0f172a;
-
-    border:none;
-
-    border-radius:10px;
-
-    font-size:17px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-button:hover{
-
-    background:#0ea5e9;
-
-}
-
-/* ===============================
-   Responsive
-================================== */
-
-@media(max-width:768px){
-
-.grid{
-
-    grid-template-columns:1fr;
+    padding:22px;
 
 }
 
@@ -387,13 +692,7 @@ button:hover{
 
 .circle h2{
 
-    font-size:48px;
-
-}
-
-h1{
-
-    font-size:34px;
+    font-size:50px;
 
 }
 
