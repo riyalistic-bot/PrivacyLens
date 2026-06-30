@@ -34,14 +34,27 @@ PrivacyLens/
 ├── app.py
 ├── requirements.txt
 ├── static/
-│   └── style.css
+│   ├── style,css
+    ├── screenshots
+        ├── home.jpeg
+        ├── assessment.jpeg
+        └── result.jpeg
 │
 └── templates/
     ├── index.html
     ├── assessment.html
     └── result.html
 ```
+## 📸 Screenshots
 
+### 🏠 Home Page
+![Home](static/screenshots/home.jpeg)
+
+### 🧠 Assessment Page
+![Assessment](static/screenshots/assessment.jpeg)
+
+### 📊 Result Page
+![Result](static/screenshots/result.jpeg)
 ---
 
 ## 🚀 Installation
